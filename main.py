@@ -6,14 +6,14 @@ from entity.JobSearch import JobSearch
 
 
 def cigo_api_sample():
-    cc = CigoConnect(debug=True, account_id='D5cljt7h7jd0Hc84QHbVuaTXbcAhvtkM8NJodUxcBRi',
-                     auth_key='O2mapBdWs2o0Mf7Ibnfc5iQK0vcEJHLLMRc1jbONqF9')
+    cc = CigoConnect(debug=True, account_id='ACCOUNT_ID',
+                     auth_key='AUTH_KEY')
 
     print('{}'.format(cc.authenticate().text))
 
     """ Create Job and Job Action example """
     job = Job(date='2021-06-22', customer_first_name='Abdullah', customer_last_name='Coded',
-              phone_number='+96598099627', address='building 3, street 2, block 1, Shuwaikh, Kuwait')
+              phone_number='+96590000000', address='building 3, street 2, block 1, Shuwaikh, Kuwait')
 
     job_response = cc.create_new_job(job)
     print('Job Create response: {}'.format(job_response.text))
