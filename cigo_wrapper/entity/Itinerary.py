@@ -1,6 +1,3 @@
-import json
-
-
 class Itinerary:
     itinerary_id = None
     date = None

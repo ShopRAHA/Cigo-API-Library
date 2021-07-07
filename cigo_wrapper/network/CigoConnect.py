@@ -1,8 +1,8 @@
 import requests
 
-from entity.Itinerary import Itinerary
-from entity.Job import Job
-from entity.JobAction import JobAction
+from cigo_wrapper.entity.Itinerary import Itinerary
+from cigo_wrapper.entity.Job import Job
+from cigo_wrapper.entity.JobAction import JobAction
 
 
 class CigoConnect:
