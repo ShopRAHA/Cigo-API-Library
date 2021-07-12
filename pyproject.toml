@@ -1,0 +1,15 @@
+[tool.poetry]
+name = "cigo-wrapper"
+version = "0.1.0"
+description = "A thin wrapper for connecting to Cigo's API"
+authors = ["Abdullah Alhussainan <abdullah@joincoded.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.7"
+requests = "^2.25.1"
+
+[tool.poetry.dev-dependencies]
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
