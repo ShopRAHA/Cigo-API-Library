@@ -8,14 +8,14 @@ You can visit the API Doc to get a general idea [API Doc](https://cigotracker.co
 
 ## Factory Cigo Library
 
-This library will help you connect with the api by calling the methods in [`CigoConnect.py`](https://github.com/CODED-Factory/Cigo-API-Library/blob/main/network/CigoConnect.py).
+This library will help you connect with the api by calling the methods in [`CigoConnect.py`](https://github.com/CODED-Factory/Cigo-API-Library/blob/main/cigo_wrapper/network/CigoConnect.py).
 
 We have 4 entities a `Job`, `JobSearch`, `JobAction` and `Itinerary`.
 
-1. [`Job`](https://github.com/CODED-Factory/Cigo-API-Library/blob/main/entity/Job.py) is used to create and retrieve Jobs
-2. [`JobSearch`](https://github.com/CODED-Factory/Cigo-API-Library/blob/main/entity/JobSearch.py) is used to search for a job
-3. [`JobAction`](https://github.com/CODED-Factory/Cigo-API-Library/blob/main/entity/JobAction.py) is used to create and retrieve JobActions
-4. [`Itinerary`](https://github.com/CODED-Factory/Cigo-API-Library/blob/main/entity/Itinerary.py) is used to retrieve itineraries
+1. [`Job`](https://github.com/CODED-Factory/Cigo-API-Library/blob/main/cigo_wrapper/entity/Job.py) is used to create and retrieve Jobs
+2. [`JobSearch`](https://github.com/CODED-Factory/Cigo-API-Library/blob/main/cigo-wrapper/entity/JobSearch.py) is used to search for a job
+3. [`JobAction`](https://github.com/CODED-Factory/Cigo-API-Library/blob/main/cigo-wrapper/entity/JobAction.py) is used to create and retrieve JobActions
+4. [`Itinerary`](https://github.com/CODED-Factory/Cigo-API-Library/blob/main/cigo-wrapper/entity/Itinerary.py) is used to retrieve itineraries
 
 ### Get Started with `CigoConnect`
 
@@ -33,4 +33,4 @@ Now you can use `cc` to call the endpoint functions, each function has a docstri
   - Raise an exception if the response has an error.
 - `Create` / `Delete` / `Update` functions always return the response from the endpoint.
 
-You can find a sample on how to use `CigoConnect.py` in [`example.py`](https://github.com/CODED-Factory/Cigo-API-Library/blob/main/main.py)
+You can find a sample on how to use `CigoConnect.py` in [`example.py`](https://github.com/CODED-Factory/Cigo-API-Library/blob/main/example.py)
