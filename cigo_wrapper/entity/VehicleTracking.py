@@ -3,11 +3,6 @@ class VehicleTracking:
     last_known = None
     route_data = None
 
-    def __init__(self, coordinates="", last_known="", route_data=""):
-        self.coordinates = coordinates
-        self.last_known = last_known
-        self.route_data = route_data
-
     @classmethod
     def from_json(cls, job_response):
         vehicle_tracking = cls()
