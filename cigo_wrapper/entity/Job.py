@@ -1,5 +1,8 @@
 import json
 
+from cigo_wrapper.entity.JobGeocoding import JobGeocoding
+from cigo_wrapper.entity.JobProgress import JobProgress
+
 
 # All dates are in ISO-8601 format
 class Job:
@@ -105,13 +108,13 @@ class Job:
                     if i_key == 'tracking' and response_dic[key][i_key] is not None:
                         job.tracking = response_dic[key][i_key]
                     elif i_key == 'progress' and response_dic[key][i_key] is not None:
-                        job.progress = response_dic[key][i_key]
+                        job.progress = JobProgress.from_json(response_dic[key][i_key])
                     elif i_key == 'scheduling' and response_dic[key][i_key] is not None:
                         job.scheduling = response_dic[key][i_key]
                     elif i_key == 'coordinates' and response_dic[key][i_key] is not None:
                         job.coordinates = response_dic[key][i_key]
                     elif i_key == 'geocoding' and response_dic[key][i_key] is not None:
-                        job.geocoding = response_dic[key][i_key]
+                        job.geocoding = JobGeocoding.from_json(response_dic[key][i_key])
                     elif i_key == 'digital_signature' and response_dic[key][i_key] is not None:
                         job.digital_signature = response_dic[key][i_key]
                     elif i_key == 'payment_collection' and response_dic[key][i_key] is not None:
