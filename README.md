@@ -15,7 +15,10 @@ We have 4 entities a `Job`, `JobSearch`, `JobAction` and `Itinerary`.
 1. [`Job`](https://github.com/CODED-Factory/Cigo-API-Library/blob/main/cigo_wrapper/entity/Job.py) is used to create and retrieve Jobs
 2. [`JobSearch`](https://github.com/CODED-Factory/Cigo-API-Library/blob/main/cigo_wrapper/entity/JobSearch.py) is used to search for a job
 3. [`JobAction`](https://github.com/CODED-Factory/Cigo-API-Library/blob/main/cigo_wrapper/entity/JobAction.py) is used to create and retrieve JobActions
-4. [`Itinerary`](https://github.com/CODED-Factory/Cigo-API-Library/blob/main/cigo_wrapper/entity/Itinerary.py) is used to retrieve itineraries
+4. [`JobGeocoding`](https://github.com/CODED-Factory/Cigo-API-Library/blob/main/cigo_wrapper/entity/JobGeocoding.py) is used retrieve job geocoding
+5. [`JobProgress`](https://github.com/CODED-Factory/Cigo-API-Library/blob/main/cigo_wrapper/entity/JobProgress.py) is used retrieve job progress
+6. [`Itinerary`](https://github.com/CODED-Factory/Cigo-API-Library/blob/main/cigo_wrapper/entity/Itinerary.py) is used to retrieve itineraries
+7. [`VehicleTracking`](https://github.com/CODED-Factory/Cigo-API-Library/blob/main/cigo_wrapper/entity/VehicleTracking.py) is used to retrieve itineraries
 
 ### Get Started with `CigoConnect`
 
