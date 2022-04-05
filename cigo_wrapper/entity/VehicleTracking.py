@@ -1,4 +1,5 @@
 class VehicleTracking:
+    # it is the last known location for the vehicle assigned to fulfil this job
     coordinates = None
     last_known = None
     route_data = None
