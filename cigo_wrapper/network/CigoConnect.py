@@ -3,9 +3,6 @@ import requests
 from cigo_wrapper.entity.Itinerary import Itinerary
 from cigo_wrapper.entity.Job import Job
 from cigo_wrapper.entity.JobAction import JobAction
-from cigo_wrapper.entity.JobGeocoding import JobGeocoding
-from cigo_wrapper.entity.JobProgress import JobProgress
-from cigo_wrapper.entity.VehicleTracking import VehicleTracking
 
 
 class CigoConnect:
@@ -196,23 +193,7 @@ class CigoConnect:
         if data['statusCode'] != 200:
             return self.__raise_response_exception(response)
 
-        job_data = data["job"]
-        job = Job.from_json(job_data)
-
-        # In job the job instance "coordinates", "progress" and "geocoding" are added from response.post_staging.%,
-        # but in retrieve_job_latest_geolocation we are getting coordinates under response.%
-        if job_data.get("progress"):
-            job.progress = JobProgress.from_json(job_data["progress"])
-
-        if job_data.get("coordinates"):
-            job.coordinates = job_data["coordinates"]
-
-        if job_data.get("geocoding"):
-            job.geocoding = JobGeocoding.from_json(job_data["geocoding"])
-
-        if job_data.get("vehicle_tracking"):
-            job.vehicle_tracking = VehicleTracking.from_json(job_data["vehicle_tracking"])
-        return job
+        return Job.from_geocoding(data["job"])
 
     def __raise_response_exception(self, response):
         raise Exception('{}'.format(response.json()))
