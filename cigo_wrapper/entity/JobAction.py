@@ -25,9 +25,8 @@ class JobAction:
     shipping_barcode = None
     create_datetime = None
 
-    def __init__(self, ref_id, action_type, description):
+    def __init__(self, ref_id, description):
         self.id = ref_id
-        self.type = action_type
         self.description = description
 
     def to_json(self):
@@ -36,8 +35,7 @@ class JobAction:
     @classmethod
     def from_json(cls, action_response):
         response_dic = action_response
-        action = cls(ref_id=response_dic['id'], action_type=response_dic['type'],
-                     description=response_dic['description'])
+        action = cls(ref_id=response_dic['id'], description=response_dic['description'])
 
         for key in response_dic.keys():
             if key == 'action_id' and response_dic[key] is not None:
