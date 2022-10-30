@@ -140,10 +140,13 @@ class CigoConnect:
 
     def update_a_job_action(self, job_id, action_id, action):
         """get a job_id, action_id and return -> json response"""
-
+        data = action.to_json()
+        __ = data.pop("type", None)
         response = requests.patch(
-            self.base_url.format('jobs/id/{job_id}/actions/{action_id}').format(job_id=job_id, action_id=action_id),
-            auth=(self.account_id, self.auth_key), json=action.to_json())
+            url=self.base_url.format('jobs/id/{job_id}/actions/{action_id}').format(job_id=job_id, action_id=action_id),
+            auth=(self.account_id, self.auth_key),
+            json=data,
+        )
 
         return response
 
