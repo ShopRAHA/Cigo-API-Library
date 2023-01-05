@@ -182,6 +182,13 @@ class CigoConnect:
 
         self.__raise_response_exception(response)
 
+    def delete_stop_on_itinerary(self, job_id, itinerary_id):
+        """Delete assigned Job while it has not started yet."""
+        response = requests.delete(
+            self.base_url.format(f'itineraries/id/{itinerary_id}/job_id/{job_id}'),
+            auth=(self.account_id, self.auth_key))
+        return response
+
     def retrieve_job_latest_geolocation(self, job_id):
         """
         Retrieve the approximate geolocation of the assigned Operator.
